@@ -1,0 +1,296 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+format = """
+($cmd_duration\n\n)\
+[](os_bg)\
+$os\
+$username\
+[](fg:os_bg bg:dir_bg)\
+$directory\
+[](fg:dir_bg bg:git_bg)\
+$git_branch\
+$git_status\
+[](fg:git_bg bg:lang_bg)\
+([ ](bg:lang_bg)\
+$nodejs\
+$bun\
+$deno\
+$c\
+$rust\
+$java\
+$haskell\
+$golang\
+$python\
+$elm\
+$lua\
+$ocaml\
+$php\
+$purescript)\
+[](fg:lang_bg bg:docker_bg)\
+$docker_context\
+[](fg:docker_bg bg:background) $fill $battery\
+$line_break$status$character"""
+
+palette = "nightfox"
+
+[palettes.nightfox]
+red = "#c94f6d"
+green = "#81b29a"
+purple = "#9d79d6"
+yellow = "#dbc074"
+os_bg = "#71839b"
+os_fg = "#131a24"
+dir_bg = "#81b29a"
+dir_fg = "#192330"
+git_bg = "#dbc074"
+git_fg = "#212e3f"
+git_stat_green = "#357a59"
+git_stat_red = "#c94f6d"
+lang_bg = "#719cd6"
+lang_fg = "#29394f"
+docker_bg = "#1d63ed"
+docker_fg = "#e5f2fc"
+status_fg = "#131a24"
+status_success = "#81b29a"
+status_error = "#c94f6d"
+
+[os]
+disabled = false
+style = "bg:os_bg fg:os_fg"
+
+[os.symbols]
+AIX = "➿"
+Alpaquita = "🔔"
+AlmaLinux = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = "🐉"
+Emscripten = "🔗"
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = " "
+Gentoo = " "
+HardenedBSD = "🛡️"
+Illumos = " "
+Kali = " "
+Linux = " "
+Mabox = "📦"
+Macos = " "
+Manjaro = " "
+Mariner = "🌊"
+MidnightBSD = "🌘"
+Mint = "󰣭 "
+NetBSD = "🚩"
+NixOS = " "
+OpenBSD = " "
+OpenCloudOS = "☁️"
+openEuler = "🦉"
+openSUSE = " "
+OracleLinux = "🦴"
+Pop = " "
+Raspbian = " "
+Redhat = "󱄛 "
+RedHatEnterprise = "󱄛 "
+RockyLinux = " "
+Redox = "🧪"
+Solus = " "
+SUSE = " "
+Ubuntu = " "
+Ultramarine = "🔷"
+Unknown = "❔"
+Void = " "
+Windows = " "
+
+[username]
+show_always = true
+style_user = "bg:os_bg fg:os_fg"
+style_root = "bg:os_bg fg:os_fg"
+format = "[ $user ]($style)"
+
+[directory]
+style = "fg:dir_fg bg:dir_bg"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰲂 "
+"Downloads" = "󰉍 "
+"Favorites" = "󰚝 "
+"Music" = "󱍙 "
+"Pictures" = "󰉏 "
+"Desktop" = " "
+"Videos" = " "
+"CrossDevice" = "󰄡 "
+"Contacts" = "󰉌 "
+"SendTo" = "󰉒 "
+"Searches" = "󰥨 "
+"OneDrive" = "󰏊 "
+"3D Objects" = "󰆧 "
+"Saved Games" = "󰊗 "
+"Links" = "󰌹 "
+"GitHub" = " "
+
+[git_branch]
+symbol = "󰘬"
+style = "bg:git_bg"
+format = '[[ $symbol $branch ](fg:git_fg bg:git_bg)]($style)'
+
+[git_status]
+style = "bg:git_bg"
+conflicted = '[󱓌 ](fg:git_stat_red bg:git_bg)'
+ahead = '⇡'
+behind = '⇣'
+diverged = '⇕'
+up_to_date = '[󱓏 ](fg:git_stat_green bg:git_bg)'
+untracked = "[󰈉 ](fg:git_fg bg:git_bg)"
+stashed = '[󱋶 ](fg:git_fg bg:git_bg)'
+modified = "[󱇧 ](fg:#b97144 bg:git_bg)"
+staged = '[󰝒 ](fg:git_stat_green bg:git_bg)'
+renamed = '[󰪹 ](fg:git_fg bg:git_bg)'
+deleted = "[󰮘 ](fg:git_stat_red bg:git_bg)"
+typechanged = '[󰬲 ](fg:git_fg bg:git_bg)'
+format = """[[(\
+$conflicted\
+$stashed\
+$deleted\
+$renamed\
+$modified\
+$typechanged\
+$staged\
+$untracked\
+$ahead_behind )](fg:git_fg bg:git_bg)]($style)"""
+
+[docker_context]
+symbol = "󰡨 "
+style = "bg:docker_bg"
+format = '[[( $symbol $context )](fg:docker_fg bg:docker_bg)]($style)'
+
+[nodejs]
+symbol = " "
+detect_files = [
+  'package.json',
+  '.node-version',
+  '.nvmrc',
+  '!bunfig.toml',
+  '!bun.lockb',
+  '!bun.lock',
+]
+style = "bg:lang_bg"
+format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[bun]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
+detect_files = ['bunfig.toml', 'bun.lockb', 'bun.lock']
+[deno]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[c]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[$symbol($version(-$name)) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[rust]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[java]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[golang]
+symbol = "󰟓 "
+style = "bg:lang_bg"
+format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[python]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[$symbol$pyenv_prefix($version)( \($virtualenv\)) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[elm]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[lua]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[ocaml]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[$symbol($version)( \($switch_indicator$switch_name\)) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[php]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[purescript]
+symbol = " "
+style = "bg:lang_bg"
+format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
+
+[fill]
+symbol = "-"
+
+[battery]
+full_symbol = '󰁹 '
+charging_symbol = '󰂄 '
+discharging_symbol = '󰂃 '
+unknown_symbol = '󰂑 '
+empty_symbol = '󰂎 '
+format = '[$symbol$percentage]($style)'
+disabled = false
+
+[[battery.display]]
+threshold = 20
+style = 'bold red'
+
+[[battery.display]]
+threshold = 30
+style = 'bold yellow'
+
+[cmd_duration]
+min_time = 500
+show_milliseconds = true
+style = 'bold yellow'
+format = '󱦟 [$duration]($style) '
+
+[character]
+disabled = false
+format = '$symbol '
+success_symbol = '[   ](bold fg:status_fg bg:status_success)[](bold fg:status_success)'
+error_symbol = '[](bold fg:status_error)'
+vimcmd_symbol = '[](bold fg:green)'
+vimcmd_replace_one_symbol = '[](bold fg:purple)'
+vimcmd_replace_symbol = '[](bold fg:purple)'
+vimcmd_visual_symbol = '[](bold fg:yellow)'
+
+[status]
+format = '[ $symbol$status ]($style)'
+symbol = ' '
+success_symbol = ''
+style = 'bold fg:status_fg bg:status_error'
+recognize_signal_code = false
+map_symbol = true
+disabled = false
