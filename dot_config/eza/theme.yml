@@ -147,6 +147,8 @@ filenames:
     stack.yml: { icon: { glyph: 󰲒 } }
     stack.yaml: { icon: { glyph: 󰲒 } }
     stack.yaml.lock: { icon: { glyph: 󰲒 } }
+    .ghc: { icon: { glyph: 󰲒 } }
+    .ghcup: { icon: { glyph: 󰲒 } }
     .npmignore: { icon: { glyph: 󰛷 } }
     eslint.config.js: { icon: { glyph: 󰱺 } }
     eslint.config.mjs: { icon: { glyph: 󰱺 } }
@@ -184,6 +186,7 @@ filenames:
     bun.lockb: { icon: { glyph:  } }
     bun.lock: { icon: { glyph:  } }
     bunfig.toml: { icon: { glyph:  } }
+    .bun: { icon: { glyph:  } }
     deno.json: { icon: { glyph:  } }
     deno.jsonc: { icon: { glyph:  } }
     deno.lock: { icon: { glyph:  } }
@@ -216,6 +219,10 @@ filenames:
     .next: { icon: { glyph:  } }
     vercel.json: { icon: { glyph:  } }
     .vercel: { icon: { glyph:  } }
+    .ocamlinit: { icon: { glyph:  } }
+    .ocamlformat: { icon: { glyph:  } }
+    .opam: { icon: { glyph:  } }
+    .dotnet: { icon: { glyph:  } }
 
 extensions:
     # Custom extension-based overrides
