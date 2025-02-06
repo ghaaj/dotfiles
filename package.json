@@ -8,6 +8,7 @@
         "husky": "^9.1.7",
         "lint-staged": "^15.4.3",
         "prettier": "^3.4.2",
+        "prettier-plugin-sh": "^0.14.0",
         "prettier-plugin-toml": "^2.0.1"
     },
     "lint-staged": {
@@ -16,6 +17,9 @@
         ],
         "*.lua": [
             "stylua"
+        ],
+        "{dot_zshrc, *.sh, *.zsh}": [
+            "shellcheck"
         ]
     }
 }

@@ -1,0 +1,124 @@
+# shellcheck disable=SC2148,SC1091
+autoload -U compinit
+compinit
+
+alias ls="eza --classify=auto --icons=auto --git --group-directories-first --header --time-style iso"
+alias ll="ls -l"
+alias lla="ll -a"
+alias rm="rm-cfm"
+alias amber="amber-bash"
+if [ -n "$TERMUX_VERSION" ]; then
+    # shellcheck disable=SC2139
+    alias browsh="browsh --firefox.path $PREFIX/bin/firefox"
+    alias start-shizuku="adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh"
+    alias yt-dlp="yt-dlp --downloader aria2c --downloader-args '-x16'"
+    alias -g clipget="termux-clipboard-get"
+    alias -g clipset="termux-clipboard-set"
+    export PROOTDISTRO_FS="$PREFIX/var/lib/proot-distro/installed-rootfs"
+else
+    alias -g clipget="xsel --clipboard --output"
+    alias -g clipset="xsel --clipboard --input"
+fi
+alias -g clip="clipset"
+
+..() {
+    dest=$(pwd)
+    for ((_n = 1; _n <= ${1:-1}; _n++)); do
+        if [ "$dest" = "$(dirname "$dest")" ]; then
+            echo -e "\033[33mWARNING: Reached the root directory\033[0m" >&2
+            break
+        else
+            dest=$(dirname "$dest")
+        fi
+    done
+    cd "$dest" || exit
+}
+
+rm-cfm() {
+    # shellcheck disable=SC2154
+    if [[ $# -eq 0 ]] || [[ $(read -r "yn?continue? [y/N]" && echo "$yn") =~ ^[Yy]$ ]]; then
+        command rm "$@"
+    else
+        echo "Abort."
+        return 1
+    fi
+}
+
+# shellcheck disable=SC2155
+export GPG_TTY=$(tty)
+
+if [[ -f /etc/zsh_command_not_found ]]; then
+    . /etc/zsh_command_not_found
+fi
+
+bindkey -e
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
+bindkey '^[[Z' reverse-menu-complete
+bindkey '^H' backward-kill-word
+bindkey '5~' kill-word
+bindkey -s '\e\e' '^U'
+
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+# shellcheck disable=SC2034
+SAVEHIST=1000
+setopt magic_equal_subst
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt hist_ignore_dups
+setopt hist_ignore_space
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || . "$HOME/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null
+# END opam configuration
+
+[ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && . "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$PATH:$HOME/.local/bin:$BUN_INSTALL/bin:/snap/bin"
+GOPATH="$(go env GOPATH)"
+[ -n "$GOPATH" ] && export PATH="$PATH:$GOPATH/bin"
+
+# BEGIN zplug configuration
+. "$HOME/.zplug/init.zsh"
+
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+
+if ! zplug check; then
+    zplug install
+fi
+
+zplug load
+# END zplug configuration
+
+unset zle_bracketed_paste
+
+export EZA_CONFIG_DIR="$HOME/.config/eza"
+# shellcheck disable=SC2155
+export USER=$(whoami)
+export EDITOR="nvim"
+eval "$(starship init zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+    *":$PNPM_HOME:"*) ;;
+    *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
