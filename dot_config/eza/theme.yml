@@ -104,132 +104,132 @@ broken_path_overlay: { foreground: Default, is_underlined: true }
 filenames:
     # Custom filename-based overrides
     # Cargo.toml: {icon: {glyph: 🦀}}
-    Documents: {icon: {glyph: 󰲂 }}
-    Searches: {icon: {glyph: 󰥨 }}
-    Videos: {icon: {glyph:  }}
-    SendTo: {icon: {glyph: 󰉒 }}
-    OneDrive: {icon: {glyph: 󰏊 }}
-    CrossDevice: {icon: {glyph: 󰄡 }}
-    npm-cache: {icon: {glyph:  }}
-    texlive: {icon: {glyph:  }}
-    Users: {icon: {glyph: 󰉌 }}
-    Windows: {icon: {glyph: 󰖳 }}
-    VS: {icon: {glyph: 󰘐 }}
-    3D Objects: {icon: {glyph: 󰆧 }}
-    Saved Games: {icon: {glyph: 󰊗 }}
-    Links: {icon: {glyph: 󰌹 }}
-    $Recycle.Bin: {icon: {glyph: 󰩹 }}
-    .vuerc: {icon: {glyph:  }}
-    .nuxtrc: {icon: {glyph: 󱄆 }}
-    .nuxt: {icon: {glyph: 󱄆 }}
-    nuxt.config.js: {icon: {glyph: 󱄆 }}
-    nuxt.config.mjs: {icon: {glyph: 󱄆 }}
-    nuxt.config.cjs: {icon: {glyph: 󱄆 }}
-    nuxt.config.ts: {icon: {glyph: 󱄆 }}
-    nuxt.config.mts: {icon: {glyph: 󱄆 }}
-    nuxt.config.cts: {icon: {glyph: 󱄆 }}
-    .lesshst: {icon: {glyph: 󰋚 }}
-    .android: {icon: {glyph: 󰀲 }}
-    .cargo: {icon: {glyph:  }}
-    .rustup: {icon: {glyph:  }}
-    .aws: {icon: {glyph: 󰸏 }}
-    .azure: {icon: {glyph: 󰠅 }}
-    .docker: {icon: {glyph: 󰡨 }}
-    .gradle: {icon: {glyph:  }}
-    .stack: {icon: {glyph: 󰲒 }}
-    .texlive2024: {icon: {glyph:  }}
-    .vscode: {icon: {glyph: 󰨞 }}
-    .vscode-server: {icon: {glyph: 󰨞 }}
-    .yarn: {icon: {glyph:  }}
-    .cache: {icon: {glyph:  }}
-    GitHub: {icon: {glyph:  }}
-    Cargo.toml: {icon: {glyph:  }}
-    stack.yml: {icon: {glyph: 󰲒 }}
-    stack.yaml: {icon: {glyph: 󰲒 }}
-    stack.yaml.lock: {icon: {glyph: 󰲒 }}
-    .npmignore: {icon: {glyph: 󰛷 }}
-    eslint.config.js: {icon: {glyph: 󰱺 }}
-    eslint.config.mjs: {icon: {glyph: 󰱺 }}
-    eslint.config.cjs: {icon: {glyph: 󰱺 }}
-    eslint.config.ts: {icon: {glyph: 󰱺 }}
-    eslint.config.mts: {icon: {glyph: 󰱺 }}
-    eslint.config.cts: {icon: {glyph: 󰱺 }}
-    .eslintignore: {icon: {glyph: 󰱺 }}
-    .eslintrc: {icon: {glyph: 󰱺 }}
-    .eslintrc.js: {icon: {glyph: 󰱺 }}
-    .eslintrc.mjs: {icon: {glyph: 󰱺 }}
-    .eslintrc.cjs: {icon: {glyph: 󰱺 }}
-    .eslintrc.ts: {icon: {glyph: 󰱺 }}
-    .eslintrc.mts: {icon: {glyph: 󰱺 }}
-    .eslintrc.cts: {icon: {glyph: 󰱺 }}
-    .eslintrc.json: {icon: {glyph: 󰱺 }}
-    .eslintrc.yml: {icon: {glyph: 󰱺 }}
-    .eslintrc.yaml: {icon: {glyph: 󰱺 }}
-    prettier.config.js: {icon: {glyph:  }}
-    prettier.config.mjs: {icon: {glyph:  }}
-    prettier.config.cjs: {icon: {glyph:  }}
-    prettier.config.ts: {icon: {glyph:  }}
-    prettier.config.mts: {icon: {glyph:  }}
-    prettier.config.cts: {icon: {glyph:  }}
-    .prettierrc: {icon: {glyph:  }}
-    .prettierrc.js: {icon: {glyph:  }}
-    .prettierrc.mjs: {icon: {glyph:  }}
-    .prettierrc.cjs: {icon: {glyph:  }}
-    .prettierrc.json: {icon: {glyph:  }}
-    .prettierrc.json5: {icon: {glyph:  }}
-    .prettierrc.yml: {icon: {glyph:  }}
-    .prettierrc.yaml: {icon: {glyph:  }}
-    .prettierrc.toml: {icon: {glyph:  }}
-    .prettierignore: {icon: {glyph:  }}
-    bun.lockb: {icon: {glyph:  }}
-    bun.lock: {icon: {glyph:  }}
-    bunfig.toml: {icon: {glyph:  }}
-    deno.json: {icon: {glyph:  }}
-    deno.jsonc: {icon: {glyph:  }}
-    deno.lock: {icon: {glyph:  }}
-    .gitignore: {icon: {glyph:  }}
-    .gitattributes: {icon: {glyph:  }}
-    .gitmodules: {icon: {glyph:  }}
-    .gitconfig: {icon: {glyph:  }}
-    .gitkeep: {icon: {glyph:  }}
-    .lfsconfig: {icon: {glyph:  }}
-    tailwind.config.js: {icon: {glyph: 󱏿 }}
-    tailwind.config.mjs: {icon: {glyph: 󱏿 }}
-    tailwind.config.cjs: {icon: {glyph: 󱏿 }}
-    tailwind.config.ts: {icon: {glyph: 󱏿 }}
-    tailwind.config.mts: {icon: {glyph: 󱏿 }}
-    tailwind.config.cts: {icon: {glyph: 󱏿 }}
-    wrangler.toml: {icon: {glyph:  }}
-    .wrangler: {icon: {glyph:  }}
-    postcss.config.js: {icon: {glyph:  }}
-    postcss.config.mjs: {icon: {glyph:  }}
-    postcss.config.cjs: {icon: {glyph:  }}
-    postcss.config.ts: {icon: {glyph:  }}
-    postcss.config.mts: {icon: {glyph:  }}
-    postcss.config.cts: {icon: {glyph:  }}
-    next.config.js: {icon: {glyph:  }}
-    next.config.mjs: {icon: {glyph:  }}
-    next.config.cjs: {icon: {glyph:  }}
-    next.config.ts: {icon: {glyph:  }}
-    next.config.mts: {icon: {glyph:  }}
-    next.config.cts: {icon: {glyph:  }}
-    .next: {icon: {glyph:  }}
-    vercel.json: {icon: {glyph:  }}
-    .vercel: {icon: {glyph:  }}
+    Documents: { icon: { glyph: 󰲂 } }
+    Searches: { icon: { glyph: 󰥨 } }
+    Videos: { icon: { glyph:  } }
+    SendTo: { icon: { glyph: 󰉒 } }
+    OneDrive: { icon: { glyph: 󰏊 } }
+    CrossDevice: { icon: { glyph: 󰄡 } }
+    npm-cache: { icon: { glyph:  } }
+    texlive: { icon: { glyph:  } }
+    Users: { icon: { glyph: 󰉌 } }
+    Windows: { icon: { glyph: 󰖳 } }
+    VS: { icon: { glyph: 󰘐 } }
+    3D Objects: { icon: { glyph: 󰆧 } }
+    Saved Games: { icon: { glyph: 󰊗 } }
+    Links: { icon: { glyph: 󰌹 } }
+    $Recycle.Bin: { icon: { glyph: 󰩹 } }
+    .vuerc: { icon: { glyph:  } }
+    .nuxtrc: { icon: { glyph: 󱄆 } }
+    .nuxt: { icon: { glyph: 󱄆 } }
+    nuxt.config.js: { icon: { glyph: 󱄆 } }
+    nuxt.config.mjs: { icon: { glyph: 󱄆 } }
+    nuxt.config.cjs: { icon: { glyph: 󱄆 } }
+    nuxt.config.ts: { icon: { glyph: 󱄆 } }
+    nuxt.config.mts: { icon: { glyph: 󱄆 } }
+    nuxt.config.cts: { icon: { glyph: 󱄆 } }
+    .lesshst: { icon: { glyph: 󰋚 } }
+    .android: { icon: { glyph: 󰀲 } }
+    .cargo: { icon: { glyph:  } }
+    .rustup: { icon: { glyph:  } }
+    .aws: { icon: { glyph: 󰸏 } }
+    .azure: { icon: { glyph: 󰠅 } }
+    .docker: { icon: { glyph: 󰡨 } }
+    .gradle: { icon: { glyph:  } }
+    .stack: { icon: { glyph: 󰲒 } }
+    .texlive2024: { icon: { glyph:  } }
+    .vscode: { icon: { glyph: 󰨞 } }
+    .vscode-server: { icon: { glyph: 󰨞 } }
+    .yarn: { icon: { glyph:  } }
+    .cache: { icon: { glyph:  } }
+    GitHub: { icon: { glyph:  } }
+    Cargo.toml: { icon: { glyph:  } }
+    stack.yml: { icon: { glyph: 󰲒 } }
+    stack.yaml: { icon: { glyph: 󰲒 } }
+    stack.yaml.lock: { icon: { glyph: 󰲒 } }
+    .npmignore: { icon: { glyph: 󰛷 } }
+    eslint.config.js: { icon: { glyph: 󰱺 } }
+    eslint.config.mjs: { icon: { glyph: 󰱺 } }
+    eslint.config.cjs: { icon: { glyph: 󰱺 } }
+    eslint.config.ts: { icon: { glyph: 󰱺 } }
+    eslint.config.mts: { icon: { glyph: 󰱺 } }
+    eslint.config.cts: { icon: { glyph: 󰱺 } }
+    .eslintignore: { icon: { glyph: 󰱺 } }
+    .eslintrc: { icon: { glyph: 󰱺 } }
+    .eslintrc.js: { icon: { glyph: 󰱺 } }
+    .eslintrc.mjs: { icon: { glyph: 󰱺 } }
+    .eslintrc.cjs: { icon: { glyph: 󰱺 } }
+    .eslintrc.ts: { icon: { glyph: 󰱺 } }
+    .eslintrc.mts: { icon: { glyph: 󰱺 } }
+    .eslintrc.cts: { icon: { glyph: 󰱺 } }
+    .eslintrc.json: { icon: { glyph: 󰱺 } }
+    .eslintrc.yml: { icon: { glyph: 󰱺 } }
+    .eslintrc.yaml: { icon: { glyph: 󰱺 } }
+    prettier.config.js: { icon: { glyph:  } }
+    prettier.config.mjs: { icon: { glyph:  } }
+    prettier.config.cjs: { icon: { glyph:  } }
+    prettier.config.ts: { icon: { glyph:  } }
+    prettier.config.mts: { icon: { glyph:  } }
+    prettier.config.cts: { icon: { glyph:  } }
+    .prettierrc: { icon: { glyph:  } }
+    .prettierrc.js: { icon: { glyph:  } }
+    .prettierrc.mjs: { icon: { glyph:  } }
+    .prettierrc.cjs: { icon: { glyph:  } }
+    .prettierrc.json: { icon: { glyph:  } }
+    .prettierrc.json5: { icon: { glyph:  } }
+    .prettierrc.yml: { icon: { glyph:  } }
+    .prettierrc.yaml: { icon: { glyph:  } }
+    .prettierrc.toml: { icon: { glyph:  } }
+    .prettierignore: { icon: { glyph:  } }
+    bun.lockb: { icon: { glyph:  } }
+    bun.lock: { icon: { glyph:  } }
+    bunfig.toml: { icon: { glyph:  } }
+    deno.json: { icon: { glyph:  } }
+    deno.jsonc: { icon: { glyph:  } }
+    deno.lock: { icon: { glyph:  } }
+    .gitignore: { icon: { glyph:  } }
+    .gitattributes: { icon: { glyph:  } }
+    .gitmodules: { icon: { glyph:  } }
+    .gitconfig: { icon: { glyph:  } }
+    .gitkeep: { icon: { glyph:  } }
+    .lfsconfig: { icon: { glyph:  } }
+    tailwind.config.js: { icon: { glyph: 󱏿 } }
+    tailwind.config.mjs: { icon: { glyph: 󱏿 } }
+    tailwind.config.cjs: { icon: { glyph: 󱏿 } }
+    tailwind.config.ts: { icon: { glyph: 󱏿 } }
+    tailwind.config.mts: { icon: { glyph: 󱏿 } }
+    tailwind.config.cts: { icon: { glyph: 󱏿 } }
+    wrangler.toml: { icon: { glyph:  } }
+    .wrangler: { icon: { glyph:  } }
+    postcss.config.js: { icon: { glyph:  } }
+    postcss.config.mjs: { icon: { glyph:  } }
+    postcss.config.cjs: { icon: { glyph:  } }
+    postcss.config.ts: { icon: { glyph:  } }
+    postcss.config.mts: { icon: { glyph:  } }
+    postcss.config.cts: { icon: { glyph:  } }
+    next.config.js: { icon: { glyph:  } }
+    next.config.mjs: { icon: { glyph:  } }
+    next.config.cjs: { icon: { glyph:  } }
+    next.config.ts: { icon: { glyph:  } }
+    next.config.mts: { icon: { glyph:  } }
+    next.config.cts: { icon: { glyph:  } }
+    .next: { icon: { glyph:  } }
+    vercel.json: { icon: { glyph:  } }
+    .vercel: { icon: { glyph:  } }
 
 extensions:
     # Custom extension-based overrides
     # rs: {filename: {foreground: Red}, icon: {glyph: 🦀}}
-    log: {icon: {glyph:  }}
-    properties: {icon: {glyph: 󰬷 }}
-    lnk: {icon: {glyph: 󰌹 }}
-    csv: {icon: {glyph: 󰈘 }}
-    mak: {icon: {glyph:  }}
-    toml: {icon: {glyph:  }}
-    cabal: {icon: {glyph: 󰲒 }}
-    ps1: {icon: {glyph: 󰨊 }}
-    psm1: {icon: {glyph: 󰨊 }}
-    psd1: {icon: {glyph: 󰨊 }}
-    xamlstyler: {icon: {glyph: 󰙳 }}
-    mdx: {icon: {glyph: 󰍔 }}
-    aac: {icon: {glyph:  }}
+    log: { icon: { glyph:  } }
+    properties: { icon: { glyph: 󰬷 } }
+    lnk: { icon: { glyph: 󰌹 } }
+    csv: { icon: { glyph: 󰈘 } }
+    mak: { icon: { glyph:  } }
+    toml: { icon: { glyph:  } }
+    cabal: { icon: { glyph: 󰲒 } }
+    ps1: { icon: { glyph: 󰨊 } }
+    psm1: { icon: { glyph: 󰨊 } }
+    psd1: { icon: { glyph: 󰨊 } }
+    xamlstyler: { icon: { glyph: 󰙳 } }
+    mdx: { icon: { glyph: 󰍔 } }
+    aac: { icon: { glyph:  } }

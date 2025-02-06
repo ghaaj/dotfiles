@@ -175,12 +175,12 @@ format = '[[( $symbol $context )](fg:docker_fg bg:docker_bg)]($style)'
 [nodejs]
 symbol = ' '
 detect_files = [
-  'package.json',
-  '.node-version',
-  '.nvmrc',
-  '!bunfig.toml',
-  '!bun.lockb',
-  '!bun.lock',
+    'package.json',
+    '.node-version',
+    '.nvmrc',
+    '!bunfig.toml',
+    '!bun.lockb',
+    '!bun.lock',
 ]
 style = 'bg:lang_bg'
 format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
@@ -189,10 +189,10 @@ format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
 symbol = ' '
 style = 'bg:lang_bg'
 format = '[[$symbol($version) ](fg:lang_fg bg:lang_bg)]($style)'
-detect_files = [
-  'bunfig.toml',
-  'bun.lockb',
-  'bun.lock',
+detect_files = [ #
+    'bunfig.toml',
+    'bun.lockb',
+    'bun.lock',
 ]
 [deno]
 symbol = ' '

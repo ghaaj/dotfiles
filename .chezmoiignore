@@ -1,2 +1,2 @@
-stylua.toml
-taplo.toml
+**/*
+!.config/**
