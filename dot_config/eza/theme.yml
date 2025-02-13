@@ -177,6 +177,9 @@ filenames:
     .prettierrc.js: { icon: { glyph:  } }
     .prettierrc.mjs: { icon: { glyph:  } }
     .prettierrc.cjs: { icon: { glyph:  } }
+    .prettierrc.ts: { icon: { glyph:  } }
+    .prettierrc.mts: { icon: { glyph:  } }
+    .prettierrc.cts: { icon: { glyph:  } }
     .prettierrc.json: { icon: { glyph:  } }
     .prettierrc.json5: { icon: { glyph:  } }
     .prettierrc.yml: { icon: { glyph:  } }
