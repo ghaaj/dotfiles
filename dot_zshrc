@@ -7,11 +7,12 @@ alias ll="ls -l"
 alias lla="ll -a"
 alias rm="rm-cfm"
 alias amber="amber-bash"
+alias yt-dlp="yt-dlp --downloader aria2c --downloader-args '-x16'"
 if [ -n "$TERMUX_VERSION" ]; then
     # shellcheck disable=SC2139
     alias browsh="browsh --firefox.path $PREFIX/bin/firefox"
     alias start-shizuku="adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh"
-    alias yt-dlp="yt-dlp --downloader aria2c --downloader-args '-x16'"
+    alias archlinux="proot-distro login archlinux --user ghaaj"
     alias -g clipget="termux-clipboard-get"
     alias -g clipset="termux-clipboard-set"
     export PROOTDISTRO_FS="$PREFIX/var/lib/proot-distro/installed-rootfs"
@@ -122,3 +123,4 @@ case ":$PATH:" in
     *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
