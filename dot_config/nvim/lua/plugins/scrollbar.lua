@@ -145,7 +145,7 @@ return {
                     gitsigns = true, -- Requires gitsigns
                     handle = true,
                     search = true, -- Requires hlslens
-                    ale = true, -- Requires ALE
+                    coc = true, -- Requires CoC
                 },
             })
             require("gitsigns").setup({})
