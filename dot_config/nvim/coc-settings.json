@@ -1,4 +1,12 @@
 {
     "snippets.ultisnips.pythonPrompt": false,
-    "powershell.integratedConsole.showOnStartup": false
+    "powershell.integratedConsole.showOnStartup": false,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.preferences.workspaceTsdk": true,
+    "eslint.enable": true,
+    "eslint.autoFixOnSave": false,
+    "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+    "typescript.tsserver.log": "verbose",
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+    "coc.preferences.formatOnSave": true
 }
