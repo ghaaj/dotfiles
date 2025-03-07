@@ -18,7 +18,7 @@
         "*.lua": [
             "stylua"
         ],
-        "{dot_zshrc, *.sh, *.zsh}": [
+        "{dot_zshrc, dot_zshenv, *.sh, *.zsh}": [
             "shellcheck"
         ]
     }
