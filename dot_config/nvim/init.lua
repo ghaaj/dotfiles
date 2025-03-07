@@ -28,7 +28,7 @@ vim.opt.wrap = false
 vim.opt.list = true
 vim.opt.listchars = "tab:»-,extends:»,precedes:«,nbsp:%,space:･"
 vim.opt.autoread = true
-vim.api.nvim_set_keymap("n", "<Esc><Esc>", "<Cmd>nohlsearch<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Esc>", "<Cmd>nohlsearch | call coc#float#close_all()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "U", "<C-r>", { noremap = true })
 vim.api.nvim_set_keymap("n", "p", "]p`]", { noremap = true })
