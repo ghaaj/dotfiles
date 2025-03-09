@@ -8,5 +8,9 @@
     "eslint.validate": ["javascript", "typescript", "typescriptreact"],
     "typescript.tsserver.log": "verbose",
     "typescript.tsserver.experimental.enableProjectDiagnostics": true,
-    "coc.preferences.formatOnSave": true
+    "coc.preferences.formatOnSave": true,
+    "floatFactory.floatConfig": {
+        "border": true,
+        "rounded": true
+    }
 }
