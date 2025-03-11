@@ -12,5 +12,6 @@ return {
         dependencies = {
             "TheGLander/indent-rainbowline.nvim",
         },
+        version = "*",
     },
 }

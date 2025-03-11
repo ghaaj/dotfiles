@@ -1,6 +1,7 @@
 return {
     {
         "folke/trouble.nvim",
+        version = "*",
         opts = {}, -- for default options, refer to the configuration section for custom setup.
         cmd = "Trouble",
         keys = {
