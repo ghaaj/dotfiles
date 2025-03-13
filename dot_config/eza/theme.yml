@@ -226,6 +226,7 @@ filenames:
     .ocamlformat: { icon: { glyph:  } }
     .opam: { icon: { glyph:  } }
     .dotnet: { icon: { glyph:  } }
+    .yarnrc.yml: { icon: { glyph:  } }
 
 extensions:
     # Custom extension-based overrides
