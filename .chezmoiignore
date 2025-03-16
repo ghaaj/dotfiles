@@ -1,4 +1,6 @@
 **/*
 !.config/**
+{{ if eq .chezmoi.os "linux" }}
 !.zshrc
 !.zshenv
+{{ end }}
