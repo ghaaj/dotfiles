@@ -1,6 +1,11 @@
 **/*
 !.config/**
+
 {{ if eq .chezmoi.os "linux" }}
 !.zshrc
 !.zshenv
+{{ end }}
+
+{{ if eq .chezmoi.os "windows" }}
+!Documents
 {{ end }}
